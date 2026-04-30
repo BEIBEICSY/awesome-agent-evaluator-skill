@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2026-04-30
+
+### Added
+- `version` field in YAML frontmatter for version tracking
+- `author` field in YAML frontmatter (BEIBEICSY)
+- `github` field in YAML frontmatter for source traceability
+
+### Changed
+- Unified report title format: `第X块` → `一、二、三、四` (Chinese numeral style)
+- Improved consistency across all report section references
+
+## [1.0.1] - 2026-04-30
+
+### Added
+- Report version selection feature (完整版 vs 精简版)
+- Step 0: Ask user for report version before analysis
+- 精简版 execution flow for users who only want conclusions and suggestions
+
+### Changed
+- 精简版 removes code snippets and line-by-line analysis
+- 精简版 keeps: gap levels (🔴/🟡/🟢), analogy explanations, suggestion timeframes (立即/短期/中期)
+- Fixed step numbering logic (步骤 0-5 sequential order)
+
+### Design Philosophy
+- 完整版: For users who want to learn detailed architecture design
+- 精简版: For users who only want evaluation results and improvement suggestions, especially those unwilling to read code
+
 ## [1.0.0] - 2026-04-30
 
 ### Added
@@ -92,6 +119,8 @@ agent-evaluator/
 
 | Version | Date | Key Changes |
 |:---|:---|:---|
+| 1.0.2 | 2026-04-30 | YAML metadata fields (version, author, github) + unified title format |
+| 1.0.1 | 2026-04-30 | Report version selection (完整版/精简版) + step numbering fix |
 | 1.0.0 | 2026-04-30 | Initial release with seven milestone framework and SOTA benchmarking |
 
 ---
